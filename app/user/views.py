@@ -6,7 +6,6 @@ from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.settings import api_settings
 
 # Create your views here.
-from user.serializers import UserSerializer
 from user.serializers import (
     UserSerializer,
     AuthTokenSerializer,
@@ -33,4 +32,3 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
     def get_object(self):
         """Retrieve and return the authenticated user."""
         return self.request.user
-
